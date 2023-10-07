@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Catbreeds</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-horizontal">
+  <ng-container *ngIf="cats; else loading">
+    <app-cat [cat]="cat" *ngFor="let cat of cats"></app-cat>
+  </ng-container>
+
+  <ng-template #loading>
+    <app-cat-skeleton *ngFor="let item of [0,1]"></app-cat-skeleton>
+  </ng-template>
+</ion-content>

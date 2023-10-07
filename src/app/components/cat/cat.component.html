@@ -1,0 +1,24 @@
+<ion-card mode="ios">
+  <ion-card-header>
+    <ion-card-title>{{ cat.breedName }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-img class="image" [alt]="cat.breedName" [src]="cat.imageUrl"></ion-img>
+
+  <ion-card-content>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon color="success" slot="start" name="pin-outline"></ion-icon>
+        <ion-label><strong>Origin:</strong> {{ cat.origin }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="danger" slot="start" name="heart-outline"></ion-icon>
+        <ion-label><strong>Affection Level:</strong> {{ cat.affectionLevel }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="warning" slot="start" name="bulb-outline"></ion-icon>
+        <ion-label><strong>Intelligence:</strong> {{ cat.intelligence }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

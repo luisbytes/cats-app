@@ -1,11 +1,16 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'cats-app',
+  appId: 'dev.luisbytes.catsapp',
+  appName: 'Catbreeds',
   webDir: 'www',
   server: {
     androidScheme: 'https'
+  },
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+    }
   }
 };
 
